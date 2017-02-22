@@ -1,11 +1,12 @@
 <h1>Build-a-Burger</h1>
 
-<h2 class="devour-add-notdevoured">Add a Burger</h2>
+    <h2 class="devour-add-notdevoured">Add a Burger</h2>
   <p>Create a Burger by pressing the add burger button!</p>
-<form class="create-update-form" action="/" method="POST">
+
+<form class="create-update-form" action="/burgers/create" method="POST">
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
+    <input type="text" class="form-control" name="burger_name" value="" id="enter_text">
     <button type="submit">Add Burger</button>
   </div>
   
@@ -17,10 +18,10 @@
   {{#each burgers}}
     {{#unless this.devoured}}
       <li>
-        {{this.burger_name}}
+        {{this.id}}. {{this.burger_name}}
 
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
+        <form method="POST" action="/burgers/update?_method=PUT" class="button_size">
+          <input type="hidden" type="text" name="burger_id" value={{this.id}}>
           <button type="submit">Devour the Burger!</button>
         </form>
 
@@ -29,6 +30,7 @@
     {{/unless}}
   {{/each}}
 </ul>
+
 
 <h2 class="devour-add-notdevoured">Burgers that are Devoured!</h2>
 
@@ -43,5 +45,6 @@
     {{/if}}
   {{/each}}
 </ul>
+
 
 
