@@ -1,0 +1,40 @@
+body {
+	background-image: url("http://www.freeppt.net/background/hamburger-ppt-background-powerpoint.jpg");
+	background-size: cover
+}
+h1 {
+	font-family: 'Slackey', cursive;
+	text-align: center;
+	font-size: 40px;
+}
+
+li {
+  margin: 5px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  margin: 5px;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+h2 {
+	font-size: 35px;
+	font-family: monospace;
+}
+
+.devoured-headline {
+	font-size: 25px;
+}
+
+.devour-add-notdevoured {
+	text-decoration: underline
+
+}
